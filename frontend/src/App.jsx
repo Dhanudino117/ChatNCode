@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+import AppRoutes from "./routes/AppRoutes";
+import { UserProvider } from "./context/user.context";
 
 const App = () => {
   return (
-    <div className='text-3xl font-bold underline'>
-      ChatNCode
-    </div>
-  )
-}
+    <UserProvider>
+      <AppRoutes />
+    </UserProvider>
+  );
+};
 
-export default App
+export default App;
